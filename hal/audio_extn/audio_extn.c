@@ -917,7 +917,7 @@ void audio_extn_perf_lock_acquire(int *handle, int duration,
 {
 
     if (!perf_lock_opts || !size || !perf_lock_acq || !handle)
-        return -EINVAL;
+        return;
     /*
      * Acquire performance lock for 1 sec during device path bringup.
      * Lock will be released either after 1 sec or when perf_lock_release
